@@ -1,0 +1,39 @@
+@{
+  Layout = "_Layout";
+}
+
+@model RecipeBox.Models.Recipe
+@using System.Collections.Generic
+
+
+<h2>Recipe Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>Total Time: @Html.DisplayFor(model => model.TotalTime)</h3>
+<h3>Ingredients: @Html.DisplayFor(model => model.Ingredients)</h3>
+
+
+@if(@Model.Cuisines.Count == 0)
+{
+  <p>This item does not belong to any categories</p>
+}
+else
+{
+  <h4>Cuisines this recipe belongs to:</h4>
+  <ul>
+  @foreach(var join in Model.Cuisines)
+  {
+    <li>@join.Cuisine.Type</li>
+    @using (Html.BeginForm("DeleteCuisine", "Recipes"))
+    {
+      @Html.Hidden("joinId", @join.CuisineRecipeId)
+      <input type="submit" value="Delete" class="btn btn-default"/>
+    }
+  }
+  </ul>
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.RecipeId })</p>
+<p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.RecipeId })</p>
+<p>@Html.ActionLink("Add a Category", "AddCategory", new { id = Model.RecipeId })</p>
