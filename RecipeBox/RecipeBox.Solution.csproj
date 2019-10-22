@@ -7,5 +7,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles"> 
+      <Version>2.2.0</Version> 
+    </PackageReference>
   </ItemGroup>
 </Project>

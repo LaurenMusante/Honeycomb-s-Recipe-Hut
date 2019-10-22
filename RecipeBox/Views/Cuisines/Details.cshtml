@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model RecipeBox.Models.Cuisine;
+
+<h2>Cuisine Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</h3>
+
+@if(@Model.Recipes.Count == 0)
+{
+  <h4>There are no recipes listed under this cuisine type yet.</h4>
+}
+else
+{
+  <h4>Recipes of thie cuisine type:</h4>
+  <ul>
+  @foreach(var join in Model.Recipes)
+  {
+    <li>@join.Recipe.Name</li>
+  }
+  </ul>
+}
+
+<p>@Html.ActionLink("Back to Cuisines", "Index")</p>
+<p>@Html.ActionLink("Edit Cuisine", "Edit", new { id = Model.CuisineId })</p>
+<p>@Html.ActionLink("Delete Cuisine", "Delete", new { id = Model.CuisineId })</p>
