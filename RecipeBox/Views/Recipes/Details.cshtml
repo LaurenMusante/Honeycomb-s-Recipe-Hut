@@ -20,20 +20,22 @@
 else
 {
   <h4>Cuisines this recipe belongs to:</h4>
-  <ul>
+  <div class="cuisine-wrap">
+  
   @foreach(var join in Model.Cuisines)
   {
-    <li>@join.Cuisine.Type</li>
+    <p>@join.Cuisine.Type</p>
     @using (Html.BeginForm("DeleteCuisine", "Recipes"))
     {
       @Html.Hidden("joinId", @join.CuisineRecipeId)
-      <input type="submit" value="Delete" class="btn btn-default"/>
+      <input type="submit" value="Delete" class="btn btn-info"/>
     }
   }
-  </ul>
+  
+  </div>
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
 <p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.RecipeId })</p>
 <p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.RecipeId })</p>
-<p>@Html.ActionLink("Add a Category", "AddCategory", new { id = Model.RecipeId })</p>
+<p>@Html.ActionLink("Add a Cuisine", "AddCuisine", new { id = Model.RecipeId })</p>

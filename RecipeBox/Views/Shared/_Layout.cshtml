@@ -6,9 +6,19 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href="~/css/styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <h1>Honeycomb's Recipe Hut</h1>
+
+      <div class="navbar">
+        <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="/Cuisines/Index"><i class="fa fa-fw fa-heart"></i> Cuisines</a>
+        <a href="/Recipes/Index"><i class="fa fa-fw fa-folder"></i> Recipes</a>
+        <a href="/Account/Index"><i class="fa fa-fw fa-paper-plane"></i> Accounts</a>
+      </div>
+    <div class="home-button">
+    <h1><a href="/">Honeycomb's Recipe Hut</a></h1>
+    </div>
     <div class="container">
     @RenderBody()
     </div>
