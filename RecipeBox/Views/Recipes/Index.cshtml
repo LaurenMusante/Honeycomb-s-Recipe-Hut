@@ -14,6 +14,26 @@
         <div class="well">
             <h4>@Html.ActionLink($"{recipe.Name}", "Details", new { id = recipe.RecipeId })</h4>
             <h5>Total Time: @recipe.TotalTime</h5>
+            <h3>
+              @switch(recipe.Rating)
+                {
+                  case "1":
+                    <i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i>
+                    break;
+                  case "2":
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i>
+                    break;
+                  case "3":
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i>
+                    break;
+                  case "4":
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i>
+                    break;
+                  case "5":
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    break;
+                }
+              </h3>
         </div>
     }
 } 

@@ -96,7 +96,8 @@ namespace RecipeBox.Controllers
         _db.CuisineRecipes.Add(new CuisineRecipe() { CuisineId = CuisineId, RecipeId = recipe.RecipeId });
         }
         _db.SaveChanges();
-        return RedirectToAction("Index");
+        int id = recipe.RecipeId;
+        return RedirectToAction("Details", "Recipes", new { id });
     }
 
     public ActionResult Delete(int id)
@@ -120,7 +121,8 @@ namespace RecipeBox.Controllers
         var joinEntry = _db.CuisineRecipes.FirstOrDefault(entry => entry.CuisineRecipeId == joinId);
         _db.CuisineRecipes.Remove(joinEntry);
         _db.SaveChanges();
-        return RedirectToAction("Index");
+        int id = joinEntry.RecipeId;
+        return RedirectToAction("Details", "Recipes", new { id });
     }
   }
 }

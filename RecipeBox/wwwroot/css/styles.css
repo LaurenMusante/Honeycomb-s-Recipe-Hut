@@ -88,7 +88,7 @@ img {
 
 /* Current/active navbar link */
 .active {
-  background-color: #5f6b1b;;
+  background-color: #5f6b1b;
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
@@ -108,4 +108,10 @@ img {
 .fas-faded
 {
   opacity: 0.2;
+}
+
+.fa-star
+{
+  color: #2f416d;
+  text-shadow: 2px 2px 2px #5f6b1b;
 }

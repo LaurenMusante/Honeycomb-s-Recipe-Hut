@@ -15,12 +15,12 @@
 else
 {
   <h4>Recipes of thie cuisine type:</h4>
-  <ul>
+  
   @foreach(var join in Model.Recipes)
   {
-    <li>@join.Recipe.Name</li>
+    <h4>@join.Recipe.Name</h4>
   }
-  </ul>
+  
 }
 
 <p>@Html.ActionLink("Back to Cuisines", "Index")</p>
