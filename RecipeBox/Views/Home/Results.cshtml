@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@using RecipeBox.Models;
+@model List<Recipe>;
+
+<h1>Search Results</h1>
+
+@foreach (Recipe result in @Model)
+{
+    <p>@result.Name</p>
+}
+
+<p>@Html.ActionLink("Back", "Index")</p>

@@ -9,7 +9,6 @@
 
 @if (Model.Any())
 {
-  <ul>
     @foreach (Recipe recipe in Model)
     {
         <div class="well">
@@ -17,7 +16,6 @@
             <h5>Total Time: @recipe.TotalTime</h5>
         </div>
     }
-  </ul>
 } 
 else
 {

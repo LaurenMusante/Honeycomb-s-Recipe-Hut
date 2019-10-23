@@ -52,18 +52,19 @@ img {
   font-size: 20px;
 }
 
-.home-button a
+.home-button h1
 {
   text-align: center;
+  font-size: 70px;
   font-family: 'Righteous', cursive;
   color: #2f416d;
-  text-decoration: none;
+  text-shadow: 2px 2px 2px white;
 }
 
 /* Style the navigation bar */
 .navbar {
   width: 100%;
-  background-color: #555;
+  background-color: #2f416d;;
   overflow: auto;
 }
 
@@ -73,8 +74,10 @@ img {
   text-align: center;
   padding: 12px;
   color: white;
+  font-family: 'Righteous', cursive;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
+  text-shadow: 2px 2px 2px black;
 }
 
 /* Navbar links on mouse-over */
@@ -84,7 +87,7 @@ img {
 
 /* Current/active navbar link */
 .active {
-  background-color: #4CAF50;
+  background-color: #5f6b1b;;
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
@@ -93,4 +96,10 @@ img {
     float: none;
     display: block;
   }
+}
+
+.icons
+{
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }

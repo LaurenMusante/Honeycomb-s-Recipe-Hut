@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@model RecipeBox.Models.Recipe;
+
+<div class="well" id="search-well">
+@using (Html.BeginForm("Results", "Home"))
+  {
+      <input type="text" name="results"/>
+      <input type="submit" value="Results" />
+  }
+</div>
