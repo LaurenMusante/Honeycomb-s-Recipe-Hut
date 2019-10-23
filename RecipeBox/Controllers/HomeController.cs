@@ -32,22 +32,29 @@ namespace RecipeBox.Controllers
         {
             results = results.ToLower();
             List<Recipe> model = _db.Recipes.Include(recipe => recipe.Cuisines).ToList();
-            System.Console.WriteLine(model.Count);
             List<Recipe> newModel = new List<Recipe>{};
             for (int i = 0; i < model.Count; i++)
             {
               model[i].Name = model[i].Name.ToLower();
               newModel.Add(model[i]);
             }
-
-            System.Console.WriteLine(newModel.Count);
-
             return View("Results", newModel.Where(r => r.Name.Contains(results)).ToList());
+        }
+
+        [HttpPost]
+        public ActionResult IngredientsResults(string ingredientsresults)
+        {
+            // results = results.ToLower();
+            System.Console.WriteLine(ingredientsresults);
+            List<Recipe> model = _db.Recipes.Include(recipe => recipe.Cuisines).ToList();
+            List<Recipe> newModel = new List<Recipe>{};
+            for (int i = 0; i < model.Count; i++)
+            {
+              model[i].Ingredients = model[i].Ingredients.ToLower();
+              newModel.Add(model[i]);
+            }
+            System.Console.WriteLine(newModel.Count);
+            return View("IngredientsResults", newModel.Where(r => r.Ingredients.Contains(ingredientsresults)).ToList());
         }
     }
 }
-
-
-
-
-// li>@Html.ActionLink($"{result.Name}", "Details", "Recipe", new { id = result.RecipeId }) | @result.TotalTime</li>

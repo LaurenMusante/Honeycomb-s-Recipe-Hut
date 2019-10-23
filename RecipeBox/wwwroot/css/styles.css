@@ -18,6 +18,7 @@ h1, h2, h3, h4
 
 a {
   color: #a34a28;
+
 }
 
 p {
@@ -102,4 +103,9 @@ img {
 {
   color: white;
   text-shadow: 2px 2px 2px black;
+}
+
+.fas-faded
+{
+  opacity: 0.2;
 }

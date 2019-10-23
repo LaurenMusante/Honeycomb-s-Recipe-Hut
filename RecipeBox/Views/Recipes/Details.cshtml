@@ -12,6 +12,26 @@
 <h3>Total Time: @Html.DisplayFor(model => model.TotalTime)</h3>
 <h3>Ingredients: @Html.DisplayFor(model => model.Ingredients)</h3>
 
+<h3>
+@switch(Model.Rating)
+  {
+    case "1":
+      <i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i>
+      break;
+    case "2":
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i>
+      break;
+    case "3":
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i>
+      break;
+    case "4":
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i>
+      break;
+    case "5":
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      break;
+  }
+</h3>
 
 @if(@Model.Cuisines.Count == 0)
 {

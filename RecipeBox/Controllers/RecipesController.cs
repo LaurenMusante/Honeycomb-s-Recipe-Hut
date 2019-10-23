@@ -77,7 +77,8 @@ namespace RecipeBox.Controllers
         }
         _db.Entry(recipe).State = EntityState.Modified;
         _db.SaveChanges();
-        return RedirectToAction("Index");
+        int id = recipe.RecipeId;
+        return RedirectToAction("Details", "Recipes", new { id });
     }
 
     public ActionResult AddCuisine(int id)

@@ -21,10 +21,16 @@
     @Html.LabelFor(model => model.Ingredients)
     @Html.TextAreaFor(model => model.Ingredients)<br>
 
-    @Html.Label("Select cusine type")
-    @Html.DropDownList("CuisineId")
+    @Html.LabelFor(model => model.Rating)
+    <select id="Rating" name="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
 
-    <input type="submit" value="Save" class="btn btn-default"/>
+    <input type="submit" value="Save" class="btn btn-info"/>
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>

@@ -17,6 +17,15 @@
     @Html.LabelFor(model => model.Ingredients, "Ingredients:")
     @Html.TextAreaFor(model => model.Ingredients, new {@class = "form-control"})
 
+    @Html.LabelFor(model => model.Rating)
+    <select id="Rating" name="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+
     @Html.Label("Select cusine type")
     @Html.DropDownList("CuisineId")<br>
 

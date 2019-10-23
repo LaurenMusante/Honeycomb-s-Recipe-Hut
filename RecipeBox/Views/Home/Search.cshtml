@@ -7,7 +7,17 @@
 <div class="well" id="search-well">
 @using (Html.BeginForm("Results", "Home"))
   {
+      <label>Search by Recipe:</label>
       <input type="text" name="results"/>
-      <input type="submit" value="Results" />
+      <input type="submit" value="Results" class="btn btn-info" />
+  }
+</div>
+
+<div class="well" id="search-well">
+@using (Html.BeginForm("IngredientsResults", "Home"))
+  {
+      <label>Search by Ingredient:</label>
+      <input type="text" name="ingredientsresults"/>
+      <input type="submit" value="Ingredients Results" class="btn btn-info" />
   }
 </div>
