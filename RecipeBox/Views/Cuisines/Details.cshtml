@@ -18,11 +18,32 @@ else
   
   @foreach(var join in Model.Recipes)
   {
-    <h4>@join.Recipe.Name</h4>
+    <div class="well">
+            <h4>@Html.ActionLink($"{join.Recipe.Name}", "Details", new { id = join.Recipe.RecipeId })</h4>
+            <h5>Total Time: @join.Recipe.TotalTime</h5>
+            <h3>
+              @switch(join.Recipe.Rating)
+                {
+                  case "1":
+                    <i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i>
+                    break;
+                  case "2":
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i>
+                    break;
+                  case "3":
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i><i class="fas fa-star fas-faded"></i>
+                    break;
+                  case "4":
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star fas-faded"></i>
+                    break;
+                  case "5":
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    break;
+                }
+              </h3>
+        </div>
   }
   
 }
 
-<p>@Html.ActionLink("Back to Cuisines", "Index")</p>
-<p>@Html.ActionLink("Edit Cuisine", "Edit", new { id = Model.CuisineId })</p>
-<p>@Html.ActionLink("Delete Cuisine", "Delete", new { id = Model.CuisineId })</p>
+<p>@Html.ActionLink("Back to Cuisines", "Index") | @Html.ActionLink("Edit Cuisine", "Edit", new { id = Model.CuisineId }) | @Html.ActionLink("Delete Cuisine", "Delete", new { id = Model.CuisineId })

@@ -18,6 +18,7 @@ namespace RecipeBox.Controllers
     public ActionResult Index()
     {
       List<Cuisine> model = _db.Cuisines.ToList();
+      model = model.OrderBy(c => c.Type).ToList();
       return View(model);
     }
 
