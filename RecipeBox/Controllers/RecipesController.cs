@@ -43,7 +43,7 @@ namespace RecipeBox.Controllers
         var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         var currentUser = await _userManager.FindByIdAsync(userId);
         recipe.User = currentUser;
-        _db.Recipes.Add(recipe);
+        _db.Recipes.Add(recipe);  //this actually adds user input to DB without needing a migration or an update.
         if (CuisineId != 0)
         {
             _db.CuisineRecipes.Add(new CuisineRecipe() { CuisineId = CuisineId, RecipeId = recipe.RecipeId });
