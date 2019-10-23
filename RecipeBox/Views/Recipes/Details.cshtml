@@ -55,4 +55,4 @@ else
   </div>
 }
 
-<p>@Html.ActionLink("Back to list", "Index") | @Html.ActionLink("Edit Item", "Edit", new { id = Model.RecipeId }) | @Html.ActionLink("Delete Item", "Delete", new { id = Model.RecipeId }) | @Html.ActionLink("Add a Cuisine", "AddCuisine", new { id = Model.RecipeId })</p>
+<p>@Html.ActionLink("Back to list", "Index", new {}, new {@class = "html-links"}) | @Html.ActionLink("Edit Item", "Edit", new { id = Model.RecipeId }, new {@class = "html-links"}) | @Html.ActionLink("Delete Item", "Delete", new { id = Model.RecipeId }, new {@class = "html-links"}) | @Html.ActionLink("Add a Cuisine", "AddCuisine", new { id = Model.RecipeId }, new {@class = "html-links"})</p>

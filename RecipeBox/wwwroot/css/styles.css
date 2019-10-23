@@ -115,3 +115,19 @@ img {
   color: #2f416d;
   text-shadow: 2px 2px 2px #5f6b1b;
 }
+
+btn btn-info
+{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+p .html-links
+{
+  font-size: 24px;
+}
+
+p .html-delete
+{
+  font-size: 40px;
+}

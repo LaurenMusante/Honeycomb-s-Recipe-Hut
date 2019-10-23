@@ -8,15 +8,15 @@
 <hr />
 @if (User.Identity.IsAuthenticated)
 {
-    <p>Hello @User.Identity.Name!</p>
+    <h3>Hello @User.Identity.Name!</h3>
     @using (Html.BeginForm("LogOff", "Account"))
     {
-        <input type="submit" class="btn btn-default" value="Log out" />
+        <input type="submit" class="btn btn-info" value="Log out" />
     }
 }
 else
 {
-    <p>@Html.ActionLink("Register", "Register")</p>
-    <p>@Html.ActionLink("Log in", "Login")</p>
-    <p>@Html.ActionLink("Home", "Index", "Home")</p>
+    <p>@Html.ActionLink("Register", "Register", new {}, new {@class = "html-links"})</p>
+    <p>@Html.ActionLink("Log in", "Login", new {}, new {@class = "html-links"})</p>
+    <p>@Html.ActionLink("Home", "Index", "Home", new {@class = "html-links"})</p>
 }

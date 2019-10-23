@@ -4,11 +4,11 @@
 
 @model RecipeBox.Models.Cuisine
 
-<h4>Add a new cuisine type</h4>
+<h3>Add a new cuisine type</h3>
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Type)
     @Html.TextBoxFor(model => model.Type)
     <input type="submit" value="Add new cuisine" class="btn btn-info" />
 }
-<p>@Html.ActionLink("Show all cuisines", "Index")</p>
+<p>@Html.ActionLink("Show all cuisines", "Index", new {}, new {@class = "html-links"}) </p>

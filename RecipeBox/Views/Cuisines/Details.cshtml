@@ -19,7 +19,7 @@ else
   @foreach(var join in Model.Recipes)
   {
     <div class="well">
-            <h4>@Html.ActionLink($"{join.Recipe.Name}", "Details", new { id = join.Recipe.RecipeId })</h4>
+            <h4>@Html.ActionLink($"{join.Recipe.Name}", "Details", "Recipes", new { id = join.Recipe.RecipeId })</h4>
             <h5>Total Time: @join.Recipe.TotalTime</h5>
             <h3>
               @switch(join.Recipe.Rating)

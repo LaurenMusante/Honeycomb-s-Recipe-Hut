@@ -4,7 +4,7 @@
 
 @model RecipeBox.Models.Recipe
 
-<h4>Add a new Recipe</h4>
+<h3>Add a new Recipe</h3>
 
 @using (Html.BeginForm())
 {
@@ -31,4 +31,4 @@
 
     <input type="submit" value="Add new recipe" class="btn btn-info" />
 }
-<p>@Html.ActionLink("Show all recipes", "Index")</p>
+<p>@Html.ActionLink("Show all recipes", "Index", new {}, new {@class = "html-links"})</p>
