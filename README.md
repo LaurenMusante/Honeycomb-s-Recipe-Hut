@@ -10,7 +10,7 @@ _User registers an account with the site, then logs in to create and save recipe
 
 ## Setup/Installation Requirements
 
-_Clone [this repository]https://github.com/LaurenMusante/Honeycomb-s-Recipe-Hut) to your desktop. Navigate to the root directory in Terminal and open in VS Code using the command "code .". Then navigate to the project folder and run "dotnet ef database update", then run "dotnet run" in the terminal. Once running, open "http://localhost:5000" to view webpage._
+_Clone [this repository](https://github.com/LaurenMusante/Honeycomb-s-Recipe-Hut) to your desktop. Navigate to the root directory in Terminal and open in VS Code using the command "code .". Then navigate to the project folder and run "dotnet ef database update", then run "dotnet run" in the terminal. Once running, open "http://localhost:5000" to view webpage._
 
 ## Known Bugs
 
