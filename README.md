@@ -22,10 +22,10 @@ _Questions, comments, and feedback, please email: Lauren.Musante@gmail.com_
 
 ## Technologies Used
 
-_CSS, .NET Core, C#_ 
+_CSS, C#/.NET Core, Razor_ 
 
 ### License
 
 *Open source*
 
-Copyright (c) 2019 **_Lauren Musante_**
+Copyright (c) 2019 **_Lauren Musante, Mike McShane_**
